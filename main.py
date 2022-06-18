@@ -10,10 +10,13 @@ twitchid = os.getenv('TWITCH_ID')
 twitchscrit = os.getenv('TWITCH_SCRIT')
 discordtoken = os.getenv('DISCORD_TOKEN')
 
-@bot.event()
+@bot.event
 async def on_ready():
     print(f'{bot.user.name} Login successful!')
     print(f'{str(len(bot.guilds))} Guilds Use.')
 
 def embed(title, description, color=random.randint(0x000000, 0xFFFFFF)):
     return discord.Embed(title=title, description=description, color=color)
+
+
+bot.run(discordtoken)
