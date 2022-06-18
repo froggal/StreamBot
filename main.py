@@ -8,6 +8,7 @@ intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='-', intents=intents, owner_ids=[906351533426356226])
 twitchid = os.getenv('TWITCH_ID')
 twitchscrit = os.getenv('TWITCH_SCRIT')
+discordtoken = os.getenv('DISCORD_TOKEN')
 
 @bot.event()
 async def on_ready():
